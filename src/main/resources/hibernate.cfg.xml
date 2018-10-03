@@ -1,0 +1,17 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database Connection Setting -->
+        <property name = "hibernate.connection.driver_class">org.h2.Driver</property>
+
+        <property name="connection.url">jdbc:h2:./data/springrest</property>
+
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+
+        <!-- Create schema on startup -->
+
+        <property name="hbm2ddl.auto">create</property>
+
+        <!-- for the annotated entity class (User)-->
+        <mapping class="app.User"/>
+    </session-factory>
+</hibernate-configuration>
